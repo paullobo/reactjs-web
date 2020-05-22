@@ -4,11 +4,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Router, Route, Switch } from "react-router-dom";
 import { RootState } from '../../slice';
 import {
-  updateCount,
-  checkIfAuthenticated
+  updateCount
 } from './app.slice';
 
 // Utility
+import {ROUTE} from '../../constants/route-constants';
 
 // Components
 import {PrivateRoute} from '../../components-business/private-route';
@@ -17,6 +17,7 @@ import history from '../../components-business/history';
 // Pages
 import Dashboard from '../dashboard';
 import Manage from '../manage';
+import ObjectPage from '../object-page'
 import Template from '../template';
 import NotFound from '../not-found';
 
@@ -47,9 +48,10 @@ const Pages = () => {
   return (
     <Router history={history}>
       <Switch>
-        <PrivateRoute path="/" exact={true} component={Dashboard} />
-        <PrivateRoute path="/manage" exact={true} component={Manage} />
-        <Route path="/login" exact={true} component={Template} />
+        <PrivateRoute path={ROUTE.DASHBOARD_PAGE} exact={true} component={Dashboard} />
+        <PrivateRoute path={ROUTE.MANAGE_PAGE} exact={true} component={Manage} />
+        <PrivateRoute path={ROUTE.OBJECT_PAGE} exact={true} component={ObjectPage} />
+        <Route path={ROUTE.LOGIN_PAGE} exact={true} component={Template} />
         <Route component={NotFound} />
       </Switch>
     </Router>

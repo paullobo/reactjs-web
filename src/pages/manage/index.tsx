@@ -2,7 +2,6 @@
 import React from 'react';
 
 // Utility
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -33,14 +32,14 @@ const Manage = () => {
           <Col className={'right-container'}>
             <img src={Images.earthIdLogoTxt} className={'head-logo'}/>
             <div className={'btn-container'}>
-              <div className={'custom-btn employee'}>
+              <div className={'custom-btn-block employee'}>
                 <img src={Icons.employeeManage}/>
                 <div className={'text-block'}>
                   <div className={'text-block-head'}>Employee Management</div>
                   <div className={'text-block-desc'}>Create, Edit &amp; Delete</div>
                 </div>
               </div>
-              <div className={'custom-btn device'}>
+              <div className={'custom-btn-block device'}>
                 <img src={Icons.deviceManage}/>
                 <div className={'text-block'}>
                   <div className={'text-block-head'}>Device Management</div>
