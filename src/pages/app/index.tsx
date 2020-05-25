@@ -17,7 +17,10 @@ import history from '../../components-business/history';
 // Pages
 import Dashboard from '../dashboard';
 import Manage from '../manage';
-import ObjectPage from '../object-page'
+import ObjectPage from '../object-page';
+import DevicePage from '../device-page';
+import EmployeePage from '../employee-page';
+import ActivationPage from '../activation-page';
 import Template from '../template';
 import NotFound from '../not-found';
 
@@ -51,6 +54,9 @@ const Pages = () => {
         <PrivateRoute path={ROUTE.DASHBOARD_PAGE} exact={true} component={Dashboard} />
         <PrivateRoute path={ROUTE.MANAGE_PAGE} exact={true} component={Manage} />
         <PrivateRoute path={ROUTE.OBJECT_PAGE} exact={true} component={ObjectPage} />
+        <PrivateRoute path={ROUTE.DEVICE_PAGE} exact={true} component={ObjectPage} />
+        <PrivateRoute path={ROUTE.EMPLOYEE_PAGE} exact={true} component={EmployeePage} />
+        <PrivateRoute path={ROUTE.ACTIVATION_PAGE} exact={true} component={ActivationPage} />
         <Route path={ROUTE.LOGIN_PAGE} exact={true} component={Template} />
         <Route component={NotFound} />
       </Switch>

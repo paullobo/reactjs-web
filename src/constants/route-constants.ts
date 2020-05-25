@@ -1,7 +1,10 @@
 export const ROUTE = {
     LOGIN_PAGE : '/login',
+    REGISTER_PAGE : '/register',
     DASHBOARD_PAGE : '/dashboard',
     MANAGE_PAGE : '/manage',
     OBJECT_PAGE : '/object',
-    EMPLOYEE_PAGE : '/employee'
+    DEVICE_PAGE : '/device',
+    EMPLOYEE_PAGE : '/employee',
+    ACTIVATION_PAGE : '/activate',
 }

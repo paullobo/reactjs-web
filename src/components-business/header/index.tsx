@@ -16,17 +16,19 @@ import {Images} from '../../assets/images';
 import {Icons} from  '../../assets/icons';
 
 
-const Header = () => {
+const Header = (props:any) => {
+  
   return (
     <div className={'header-container'}>
         <img src={Images.earthIdLogoTxt} className={'header-logo'}/>
         <img src={Images.earthIdLogoEmblem} className={'header-logo-mb'}/>
-        <div className={'right-block'}>
+        {props && props.optionVisible ? <div className={'right-block'}>
             <img src={Images.companyProfile} className={'profile-image'}/>
             <div className={'profile-name'}>
-                Rejolut Technologies Pvt Ltd Can be a LLP bu
+                Rejolut Technologies Pvt Ltd
             </div>
-        </div>
+        </div> : null}
+        
     </div>
   );
 };

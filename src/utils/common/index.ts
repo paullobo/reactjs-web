@@ -11,3 +11,5 @@ export const mobileAndTabletDeviceCheck = () => {
 };
 
 export const checkScreenWidthMobile = ()=>(window as any).innerWidth <= 767;
+
+export const stringReplaceAt = (repstring:String ,index:number, replacement:string) => repstring.substr(0, index) + replacement + repstring.substr(index + replacement.length);

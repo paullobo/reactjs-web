@@ -12,7 +12,7 @@ import {FiSearch} from 'react-icons/fi';
 import {BsTrash} from 'react-icons/bs';
 
 // Styling
-import './object-page.scss';
+import './employee-page.scss';
 
 // Assets
 import {Images} from '../../assets/images';
@@ -22,9 +22,9 @@ import {Icons} from  '../../assets/icons';
 import Header from '../../components-business/header';
 
 
-const ObjectPage = () => {
+const EmployeePage = () => {
   return (
-    <div className="page-wrapper2 bg-blue object-page">
+    <div className="page-wrapper2 bg-blue employee-page">
         <Row className={'page-container2 bg-white'}>
           <Container>
             <Header optionVisible/>
@@ -33,12 +33,12 @@ const ObjectPage = () => {
             <div className={'title-container'}>
               <div className={'center-block'}>
                 <img src={Icons.deviceList}/>
-                <div className={'title-text'}>{'Object List'}</div>
+                <div className={'title-text'}>{'Employee List'}</div>
               </div>
               <div className={'right-block'}>
                 <div className={'custom-btn'}>
                   <img src={Icons.deviceAddIcon}/>
-                  <div>{'Add Object'}</div>
+                  <div>{'Add Device'}</div>
                 </div>
               </div>
             </div>
@@ -48,7 +48,7 @@ const ObjectPage = () => {
             <div className={'options-container'}>
               <div className={'center-block'}>
                 <div className={'search-input-container'} >
-                  <input className={'search-input'} placeholder={'Search Object'} />
+                  <input className={'search-input'} placeholder={'Search Employee'} />
                   <FiSearch size={14}/>
                 </div>
               </div>
@@ -65,8 +65,8 @@ const ObjectPage = () => {
                 <tr>
                   <th>Select</th>
                   <th>Date</th>
-                  <th>Object Name</th>
-                  <th>Object ID</th>
+                  <th>Employee Name</th>
+                  <th>Employee ID</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
@@ -75,8 +75,8 @@ const ObjectPage = () => {
                 <tr>
                   <td>select</td>
                   <td>09 March 2020</td>
-                  <td>Conference Room</td>
-                  <td>#device01</td>
+                  <td>Paul Lobo</td>
+                  <td>#empid</td>
                   <td>edit</td>
                   <td>delete</td>
                 </tr>
@@ -90,4 +90,4 @@ const ObjectPage = () => {
   );
 };
 
-export default ObjectPage;
+export default EmployeePage;
