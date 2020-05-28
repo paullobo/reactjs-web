@@ -1,10 +1,15 @@
 import { createSlice, PayloadAction, Dispatch } from '@reduxjs/toolkit'
 // Utility
 import {db} from '../../utils/local-storage';
+import {getUserData,clearLocalUser,updateToken,updateProfileUserData} from '../../utils/auth';
+import {LOCAL_STOARGE} from '../../constants/common';
+
+const userdata = getUserData();
 
 // Interface Declerations
 interface IStateData {
-    isAuthenticated:Boolean
+    isAuthenticated:Boolean,
+    userData:any,
     count:number
 }
 
@@ -16,10 +21,15 @@ interface IUpdateCountPayload {
   count:number
 }
 
+interface IUpdateUserData {
+  userData:any
+}
+
 
 // Intial State
 let initialState: IStateData = {
-  isAuthenticated:true,
+  isAuthenticated:false,
+  userData:userdata,
   count:0
 }
 
@@ -32,6 +42,10 @@ const appSlice = createSlice({
       const { isAuthenticated } = action.payload
       state.isAuthenticated = isAuthenticated;
     },
+    updateUserData(state, action: PayloadAction<IUpdateUserData>) {
+      const { userData } = action.payload
+      state.userData = userData;
+    },
     updateCount(state, action: PayloadAction<IUpdateCountPayload>) {
         const { count } = action.payload
         state.count = count;
@@ -42,6 +56,7 @@ const appSlice = createSlice({
 // Slice actions exposed and exported
 export const {
   updateAuthState,
+  updateUserData,
   updateCount
 } = appSlice.actions;
 
@@ -49,23 +64,19 @@ export const {
 export default appSlice.reducer;
 
 // Slice wrapped functions
-export const checkIfAuthenticated = () => (dispatch:Dispatch):Promise<any> =>{
-  return new Promise(async(resolve,reject)=>{
-    try{
-      if(await db.get('token')){
-        // Dummy check 
-        dispatch(updateAuthState({isAuthenticated:true}));
-        resolve();
-      }
-        // @TODO Hit api to check authentication
-        // @TODO Store to local storage auth token
-        setTimeout(() => {
-          db.set('token','sdfggdgagbvdjsaaaaaaaaaa');
-          dispatch(updateAuthState({isAuthenticated:true}));
-          resolve();
-        }, 5000);
-    }catch(e){
-      reject(e);
-    }
-  })
+export const logoutUser = () => (dispatch:Dispatch) =>{
+  // Clear local storage
+  clearLocalUser();
+
+  dispatch(updateAuthState({isAuthenticated:false}));
+  dispatch(updateUserData({userData:{}}));
+}
+
+export const loginUser = (userData:any,token:any) => async(dispatch:Dispatch) =>{
+    // Data store to local storage
+    await updateToken(token);
+    
+    await updateProfileUserData(userData);
+    dispatch(updateAuthState({isAuthenticated:true}));
+    dispatch(updateUserData({userData}));
 }

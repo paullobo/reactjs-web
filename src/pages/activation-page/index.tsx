@@ -53,7 +53,7 @@ const ActivationPage = () => {
   }
 
   return (
-    <div className="page-wrapper2 bg-blue object-page">
+    <div className="page-wrapper2 bg-blue activation-page">
         <Row className={'page-container2 bg-white'}>
           <Container>
             <Header/>

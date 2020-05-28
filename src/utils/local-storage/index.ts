@@ -12,6 +12,7 @@ export const db ={
             let value :string | null= await window.localStorage.getItem(key);
             return value ? JSON.parse(value) : null;
           } catch (error) {
+            console.log('ERR',error)
             throw 'Can\'t retrieve data';
           }
     }

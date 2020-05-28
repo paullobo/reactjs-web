@@ -32,13 +32,13 @@ const EmployeePage = () => {
             {/* TITLE BAR START */}
             <div className={'title-container'}>
               <div className={'center-block'}>
-                <img src={Icons.deviceList}/>
+                <img src={Icons.employeeList}/>
                 <div className={'title-text'}>{'Employee List'}</div>
               </div>
               <div className={'right-block'}>
                 <div className={'custom-btn'}>
-                  <img src={Icons.deviceAddIcon}/>
-                  <div>{'Add Device'}</div>
+                  <img src={Icons.employeeAddIcon}/>
+                  <div>{'Add Employee'}</div>
                 </div>
               </div>
             </div>

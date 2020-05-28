@@ -1,5 +1,5 @@
 // React Imports
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Utility
 import Row from 'react-bootstrap/Row';
@@ -14,6 +14,7 @@ import {Icons} from  '../../assets/icons';
 
 
 const Manage = (props:any) => {
+  
   return (
     <div className="page-wrapper manage-page">
         <Row className={'page-container'}>

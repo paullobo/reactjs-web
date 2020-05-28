@@ -4,5 +4,7 @@ export const Images = {
     abstractDots:require('./resources/abstract-dots.png'),
     earthIdLogoTxt:require('./resources/earthid-logo-text-sm.png'),
     earthIdLogoEmblem:require('./resources/earthid-logo-emblem.png'),
-    companyProfile:require('./resources/company-profile.png')
+    companyProfile:require('./resources/company-profile.png'),
+    earthProjection:require('./resources/earth-projection.png'),
+    securityLockShield:require('./resources/security-lock-shield.png')
 }

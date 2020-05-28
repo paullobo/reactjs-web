@@ -35,12 +35,12 @@ const DevicePage = () => {
                 <img src={Icons.deviceList}/>
                 <div className={'title-text'}>{'Device List'}</div>
               </div>
-              <div className={'right-block'}>
+              {/* <div className={'right-block'}>
                 <div className={'custom-btn'}>
                   <img src={Icons.deviceAddIcon}/>
                   <div>{'Add Device'}</div>
                 </div>
-              </div>
+              </div> */}
             </div>
             {/* TITLE BAR END */}
             
@@ -52,10 +52,10 @@ const DevicePage = () => {
                   <FiSearch size={14}/>
                 </div>
               </div>
-              <div className={'right-block'}>
+              {/* <div className={'right-block'}>
                   <BsTrash size={14}/>
                   <div className={'block-text'}>{'Delete All'}</div>
-              </div>
+              </div> */}
             </div>
             {/* OPTIONS BAR END */}
 
@@ -63,22 +63,16 @@ const DevicePage = () => {
             <Table responsive>
               <thead>
                 <tr>
-                  <th>Select</th>
                   <th>Date</th>
                   <th>Device Name</th>
-                  <th>Device ID</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
+                  <th>Status</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>select</td>
                   <td>09 March 2020</td>
-                  <td>Conference Room</td>
-                  <td>#device01</td>
-                  <td>edit</td>
-                  <td>delete</td>
+                  <td>Apple IPad</td>
+                  <td>pair</td>
                 </tr>
               </tbody>
             </Table>

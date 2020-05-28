@@ -4,5 +4,7 @@ export const Icons = {
     deviceList:require('./resources/device-list-icon.png'),
     deviceManage:require('./resources/device-manage-icon.png'),
     employeeManage:require('./resources/employee-manage-icon.png'),
-    
+    employeeList:require('./resources/employee-list-icon.png'),
+    employeeAddIcon:require('./resources/employee-add-icon.png'),
+
 }

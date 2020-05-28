@@ -1,46 +1,47 @@
 @import '../../constants/style-variables.scss'; 
 
-.verify-container{
-    
-    height: calc(100% - 200px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .verify-block{
+.activation-page{
+    .verify-container{
+        height: calc(100% - 200px);
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        max-width: 340px;
-        width: 100%;
-
-        .title-txt{
-            font-size: $m-font;
-            color:$black;
-        }
-
-        .verify-code{
-            width: 100%;
+    
+        .verify-block{
             display: flex;
-            justify-content: space-between;
-            margin-top: 40px;
-            margin-bottom: 100px;
-
-            .code-input{
-                width: 60px;
-                height: 60px;
-                border-radius: 8px;
-                border: 2px solid $light-grey;
-                outline: none;
-                text-align: center;
-                font-size: $l-font;
+            flex-direction: column;
+            align-items: center;
+            max-width: 340px;
+            width: 100%;
+    
+            .title-txt{
+                font-size: $m-font;
                 color:$black;
             }
-        }
-
-        .verify-btn{
-            width: 100%;
-            max-width: 250px;
+    
+            .verify-code{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 40px;
+                margin-bottom: 100px;
+    
+                .code-input{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 8px;
+                    border: 2px solid $light-grey;
+                    outline: none;
+                    text-align: center;
+                    font-size: $l-font;
+                    color:$black;
+                }
+            }
+    
+            .verify-btn{
+                width: 100%;
+                max-width: 250px;
+            }
         }
     }
 }

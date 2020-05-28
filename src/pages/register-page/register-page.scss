@@ -1,0 +1,141 @@
+@import '../../constants/style-variables.scss'; 
+
+.register-page{
+    .left-container{
+        background: $primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    
+        &:after{
+            content:'';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-left: 88px solid transparent;
+            border-bottom: 100vh solid $white;
+        }
+    
+        .ele{
+            position: absolute;
+        }
+    
+        .ele-1{
+            width: 162%;
+            bottom: 150%;        
+        }
+       
+        .text-block{
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 0;
+            position: absolute;
+            bottom: 56px;
+            margin-left: -10%;
+            .text-block-head{
+                 font-size: $xxl-font;
+                 font-weight: 600;
+                 margin-bottom: 10px;
+            }
+            .text-block-desc{
+                 font-size: $um-font;
+                 margin-bottom: 40px;
+            }
+            .login-btn{
+                font-size: $l-font;
+                font-weight: 600;
+                height: 40px;
+                width: 100%;
+                min-width: 100px;
+                max-width: 250px;
+                background: $primary;
+                border: 1px solid $white;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &:hover{
+                    background: rgba(255,255,255,0.1);
+                }
+            }
+        }
+    }
+    
+    .right-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    
+        
+
+        .signup-container{
+
+            width: 100%;
+            max-width: 300px;
+            min-width: 200px;
+
+            .head-logo{
+                width: 80px;
+             }
+
+            .title{
+                margin-top: 35px;
+                margin-bottom: 25px;
+                font-size: $xl-font;
+            }
+            
+            .field-container{
+                margin: 18px 0px;
+                width: 100%;
+                .MuiFormControl-root{
+                    width: 100%;
+                }
+                .MuiInputLabel-outlined {
+                    transform: translate(14px, 15px) scale(1);
+                }
+                .MuiInputLabel-outlined.MuiInputLabel-shrink{
+                    transform: translate(14px, -6px) scale(0.75);
+                }
+                .MuiOutlinedInput-input{
+                    padding: 11.5px 14px;
+                }
+                    
+            }
+
+            .checkbox-container{
+                margin: 18px 0px;
+                width: 100%;
+                display: flex;
+                .MuiCheckbox-root{
+                    padding-top: 0px;
+                }
+                .checkbox-label{
+                    margin-left: -12px;
+                    font-size: $m-font;
+                }
+            }
+            .signup-btn{
+                width: 100%;
+                margin: 18px 0px;
+            }
+        }
+    
+        
+    }
+    
+    
+    @media screen and (max-width:767px){
+        .left-container{
+            display: none;
+        }
+    }
+}
