@@ -82,4 +82,54 @@
             }
         }
     }
+
+    .nodata-found{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 65px;
+        font-size: 16px;
+        color: rgba(0,0,0,0.3);
+    }
+
+    .data-table{
+        .cta-td-icon{
+            cursor: pointer;
+        }
+        .cta-td-icon.edit{
+            color:$primary;
+        }
+        .cta-td-icon.delete{
+            color:$red;
+        }
+
+    }
+
+    .field-container{
+        margin: 18px 0px;
+        width: 100%;
+        .MuiFormControl-root{
+            width: 100%;
+        }
+        .MuiInputLabel-outlined {
+            transform: translate(14px, 15px) scale(1);
+        }
+        .MuiInputLabel-outlined.MuiInputLabel-shrink{
+            transform: translate(14px, -6px) scale(0.75);
+        }
+        .MuiOutlinedInput-input{
+            padding: 11.5px 14px;
+        }
+            
+    }
+
+    .modal-view{
+        .cancel{
+            background: $red;
+        }
+        .modal-btn{
+
+        }
+    }
+
 }

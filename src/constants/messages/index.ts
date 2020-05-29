@@ -32,6 +32,7 @@ export const MESSAGE = {
         PASSWORD_EMPTY:'You will need a Password to get access',
         PASSWORD_INVALID:'Password should be greater than 8 characters',
         CPASSWORD_INVALID:'Confirmed Password does not match',
+        SESSION_EXPIRED:'Session Expired!, Please login to continue'
     },
     // **************************************************
 
