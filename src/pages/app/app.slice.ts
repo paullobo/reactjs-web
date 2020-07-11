@@ -1,8 +1,7 @@
 import { createSlice, PayloadAction, Dispatch } from '@reduxjs/toolkit'
 // Utility
-import {db} from '../../utils/local-storage';
 import {getUserData,clearLocalUser,updateToken,updateProfileUserData} from '../../utils/auth';
-import {LOCAL_STOARGE} from '../../constants/common';
+import { ROUTE } from '../../constants/route-constants';
 
 const userdata = getUserData();
 
@@ -45,11 +44,8 @@ const appSlice = createSlice({
     updateUserData(state, action: PayloadAction<IUpdateUserData>) {
       const { userData } = action.payload
       state.userData = userData;
-    },
-    updateCount(state, action: PayloadAction<IUpdateCountPayload>) {
-        const { count } = action.payload
-        state.count = count;
     }
+  
   }
 })
 
@@ -57,7 +53,6 @@ const appSlice = createSlice({
 export const {
   updateAuthState,
   updateUserData,
-  updateCount
 } = appSlice.actions;
 
 // Slice exported
@@ -70,12 +65,13 @@ export const logoutUser = () => (dispatch:Dispatch) =>{
 
   dispatch(updateAuthState({isAuthenticated:false}));
   dispatch(updateUserData({userData:{}}));
+  window.location.href = ROUTE.LOGIN_PAGE;
 }
 
 export const loginUser = (userData:any,token:any) => async(dispatch:Dispatch) =>{
     // Data store to local storage
     await updateToken(token);
-    
+    console.log('USERDATA',userData)
     await updateProfileUserData(userData);
     dispatch(updateAuthState({isAuthenticated:true}));
     dispatch(updateUserData({userData}));

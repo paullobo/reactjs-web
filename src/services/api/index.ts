@@ -27,10 +27,4 @@ const getAuthHeader = async() =>{
 } 
 
 export const REQ_LOGIN = async(body:any)=> await axios.post(API.LOGIN,body);
-export const REQ_REGISTER = async(body:any)=> await axios.post(API.REGISTER,body);
-
-export const REQ_GET_EMPLOYEE= async(params:any)=> await axios.get(API.GET_EMPLOYEE,{params,headers:await getAuthHeader()});
-export const REQ_ADD_EMPLOYEE= async(body:any)=> await axios.put(API.ADD_EMPLOYEE,body,{headers:await getAuthHeader()});
-export const REQ_UPDATE_EMPLOYEE= async(body:any)=> await axios.post(API.UPDATE_EMPLOYEE,body,{headers:await getAuthHeader()});
-
-// export const REGISTER = async(body:any,headers:IReqHeader)=> await axios.post(API.LOGIN,{data:body},{headers});
+export const REQ_REGISTER = async(body:any)=> await axios.put(API.REGISTER,body);

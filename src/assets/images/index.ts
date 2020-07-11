@@ -1,10 +1,6 @@
 export const Images = {
-    abstractCircular:require('./resources/abstract-circulars.png'),
-    abstractConcentric:require('./resources/abstract-concentric-circles.png'),
-    abstractDots:require('./resources/abstract-dots.png'),
-    earthIdLogoTxt:require('./resources/earthid-logo-text-sm.png'),
-    earthIdLogoEmblem:require('./resources/earthid-logo-emblem.png'),
-    companyProfile:require('./resources/company-profile.png'),
-    earthProjection:require('./resources/earth-projection.png'),
-    securityLockShield:require('./resources/security-lock-shield.png')
+   
+    userData:require('./resources/userdata.png'),
+    fingerprint:require('./resources/fingerprint.png')
+
 }

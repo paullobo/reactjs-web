@@ -23,8 +23,8 @@ export const MESSAGE = {
 
     // ***************** ERROR MESSAGES *****************
     ERROR:{
-        ORG_NAME_EMPTY:'What is the name of your Organization',
-        ORG_NAME_LENGTH:'Should be greater than 2 characters',
+        USER_NAME_EMPTY:'What is your FisrtName',
+        USER_NAME_LENGTH:'Should be greater than 2 characters',
         PHONE_EMPTY:'Mobile number is mandatory',
         PHONE_INVALID:'Mobile number is invalid',
         EMAIL_EMPTY:'Email is mandatory',
